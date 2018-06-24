@@ -13,7 +13,9 @@
 <body>
     <div class="container">
         <center>
-            <img src="http://www.megaplast18.com/files/18034/2018/03/04/3-196.jpg" width="200px" />
+            <a href="/">
+                <img src="user/static/img/logo.png" width="200px" />
+            </a>
             <h1>Добре дошли!</h1>
             <h2>Регистрация</h2>
             <form action="/user/register" method="POST" class="form-horizontal">
@@ -26,11 +28,12 @@
                     <input type="password" name="password" id="password" class="form-control">
                 </div>
                 <div class="form-group">
-                        <label for="password2"> Повтори паролата</label>
-                        <input type="password" name="password2" id="password2" class="form-control">
-                    </div>
+                    <label for="password2"> Повтори паролата</label>
+                    <input type="password" name="password2" id="password2" class="form-control">
+                </div>
                 <div class="form-group">
-                    <a href="/user/login">Имате акаунт?</a><br>
+                    <a href="/user/login">Имате акаунт?</a>
+                    <br>
                     <input type="submit" value="Регистрирай ме">
                 </div>
             </form>
