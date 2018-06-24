@@ -5,9 +5,7 @@ models =
         session: require '../models/session'
 
 getUsername = (sId, callback) ->
-    console.log sId
     modules.db.find models.session.type, { id: sId }, (err, sessions) ->
-        console.log sessions
         if sessions.length
             callback sessions[0].username
         else
@@ -15,9 +13,8 @@ getUsername = (sId, callback) ->
         return
 
 getUserID = (sId, callback) ->
-    console.log sId
+
     modules.db.find models.session.type, { id: sId }, (err, sessions) ->
-        console.log sessions
         if sessions.length
             callback sessions[0].id
         else

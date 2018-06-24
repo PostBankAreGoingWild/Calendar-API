@@ -89,7 +89,6 @@ logout = (req, res) ->
 
 getLogedUserEmail = (req, res) ->
     modules.user.getUsername req.cookies.sessionId, (name) ->
-        console.log name
         res.send name
 
 exports.getLogedUserEmail = getLogedUserEmail
