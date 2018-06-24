@@ -1,0 +1,36 @@
+{
+    "name": "The-judgata",
+    "version": "0.0.1",
+    "description": "The-judgata web server",
+    "keywords": [
+        "node",
+        "web",
+        "server",
+        "coffeescript"
+    ],
+    "homepage": "https://github.com/PostBankAreGoingWild/Calendar-API",
+    "bugs": {
+        "url": "https://github.com/PostBankAreGoingWild/Calendar-API/issues"
+    },
+    "license": "GPL-3.0",
+    "author": {
+        "name": "Dimo Chanev"
+    },
+    "main": "server.coffee",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/PostBankAreGoingWild/Calendar-API"
+    },
+    "scripts": {
+        "start": "./run"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "coffee-script": "^1.12.7",
+        "cookie-parser": "^1.4.3",
+        "express": "^4.16.3",
+        "mongodb": "^3.0.10",
+        "mongoose": "^5.1.6",
+        "validator": "^10.4.0"
+    }
+}

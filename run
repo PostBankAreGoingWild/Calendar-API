@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -rf ./node_modules
+npm install
+./node_modules/coffee-script/bin/coffee server.coffee
