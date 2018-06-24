@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Вход </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <center>
+            <img src="http://www.megaplast18.com/files/18034/2018/03/04/3-196.jpg" width="200px" />
+            <h1>Добре дошли!</h1>
+            <h2>Вход</h2>
+            <form action="/user/login" method="POST" class="form-horizontal">
+                <div class="form-group">
+                    <label for="email">Имейл</label>
+                    <input type="email" name="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="password">Парола</label>
+                    <input type="password" name="password" id="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <a href="/user/register">Все още не сте се регистрирали?</a><br>
+                    <input type="submit" value="Влез">
+                </div>
+            </form>
+        </center>
+    </div>
+</body>
+
+</html>

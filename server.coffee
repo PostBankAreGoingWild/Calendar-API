@@ -18,9 +18,15 @@ app.use bodyParser.urlencoded(extended: true)
 app.use cookieParser()
 
 app.get '/', (req, res) ->
-    res.redirect '/layout/index.html'
+    res.redirect '/user/layout/index.html'
 
 app.use express.static 'static'
+
+app.get '/user/login', (req, res) ->
+    res.redirect '/login.html'
+
+app.get '/user/register', (req, res) ->
+    res.redirect '/register.html'
 
 app.post '/user/login', routes.accounts.postLogin
 

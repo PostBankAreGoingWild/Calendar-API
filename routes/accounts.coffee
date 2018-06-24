@@ -46,7 +46,7 @@ postLogin = (req, res) ->
                     uId: usr[0].id
                     isAdmin: usr[0].admin
                     username: usr[0].email), (a) ->
-                res.send()
+                res.redirect '/'
             else
                 res.status 400
                 res.send 'Грешен имейл или парола'
@@ -69,7 +69,7 @@ postRegister = (req, res) ->
                             password: crypto.createHmac('sha256', date).update(req.body.password).digest 'hex'
                             admin: false
                             email: req.body.email), (a) ->
-                            res.send()
+                            res.redirect '/user/login'
                             return
                     else
                         res.status 400
