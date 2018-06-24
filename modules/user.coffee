@@ -13,13 +13,21 @@ getUsername = (sId, callback) ->
         return
 
 getUserID = (sId, callback) ->
-
     modules.db.find models.session.type, { id: sId }, (err, sessions) ->
         if sessions.length
-            callback sessions[0].id
+            callback sessions[0].uId
+        else
+            callback undefined
+        return
+
+isAdmin = (sId, callback) ->
+    modules.db.find models.session.type, { id: sId }, (err, sessions) ->
+        if sessions.length
+            callback sessions[0].isAdmin
         else
             callback undefined
         return
     
 exports.getUsername = getUsername
 exports.getUserID = getUserID
+exports.isAdmin = isAdmin

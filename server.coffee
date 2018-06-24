@@ -33,6 +33,7 @@ app.get '/user/email', routes.accounts.getLogedUserEmail
 
 app.get '/event', routes.events.getEventByDate
 app.post '/event/add', routes.events.postAddEvent
+app.post '/event/admin/add', routes.events.postAddEvent
 
 app.use (req, res, next) ->
     res.status 404

@@ -43,6 +43,8 @@ postLogin = (req, res) ->
                     res.cookie 'sessionId', sessionId
                 modules.db.add new (models.session.type)(
                     id: sessionId
+                    uId: usr[0].id
+                    isAdmin: usr[0].admin
                     username: usr[0].email), (a) ->
                 res.send()
             else
@@ -65,6 +67,7 @@ postRegister = (req, res) ->
                         modules.db.add new (models.user.type)(
                             passwordsha256: date
                             password: crypto.createHmac('sha256', date).update(req.body.password).digest 'hex'
+                            admin: false
                             email: req.body.email), (a) ->
                             res.send()
                             return
