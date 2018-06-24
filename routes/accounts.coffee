@@ -87,7 +87,7 @@ postRegister = (req, res) ->
 logout = (req, res) ->
     res.cookie 'sessionId', undefined
     modules.db.remove models.session.type, { id: req.cookies.sessionId }, (err) ->
-    res.send()
+    res.redirect '/'
     return    
 
 getLogedUserEmail = (req, res) ->

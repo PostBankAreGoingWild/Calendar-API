@@ -12,6 +12,7 @@ checkByDate = (event, userId, start, end) ->
     false
 
 getEventByDate = (req, res) ->
+    console.log req.body
     modules.user.getUserID req.cookies.sessionId, (uID) ->
         modules.db.find models.event.type, {}, (err, events) ->
             if err
