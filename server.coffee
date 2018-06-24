@@ -5,7 +5,7 @@ cookieParser = require 'cookie-parser'
 
 routes = 
     accounts: require __dirname + '/routes/accounts' 
-    home: require __dirname + '/routes/events'
+    events: require __dirname + '/routes/events'
 
 modules = 
     user: require __dirname + '/modules/user'
@@ -25,6 +25,8 @@ app.get '/user/logout', routes.accounts.logout
 app.post '/user/logout', routes.accounts.logout
 
 app.get '/user/email', routes.accounts.getLogedUserEmail
+
+app.get '/event', routes.events.getEventByDate
 
 app.use (req, res, next) ->
     res.status 404

@@ -9,4 +9,4 @@ eventSchema = mongoose.Schema
     type: Number
     userId: String
 
-exports.type = mongoose.model 'sessions', sessionSchema
+exports.type = mongoose.model 'events', eventSchema
